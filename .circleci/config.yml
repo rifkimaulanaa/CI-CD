@@ -1,9 +1,7 @@
-# CircleCI configuration file
+# ~/.circleci/config.yml
 version: 2.1
-
 jobs:
-  build:
+  test:
     docker:
-     - image: cimg/base:2022.05
-    steps:
-        - run: /login.php
+      - image: cimg/base:2022.11
+    parallelism: 4
